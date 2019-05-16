@@ -62,7 +62,7 @@ class BaseQuotation(metaclass=abc.ABCMeta):
         warnings.warn("use market_snapshot instead", DeprecationWarning)
         return self.get_stock_data(self.stock_list)
 
-    @property
+    #@property
     def all_market(self):
         """return quotation with stock_code prefix key"""
         return self.get_stock_data(self.stock_list, prefix=True)
